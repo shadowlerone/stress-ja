@@ -79,6 +79,8 @@ img.scls {
 	margin-bottom: auto;
 }
 a.scls {
+	height: 30px;
+	width: 30px;
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: auto;
@@ -485,8 +487,8 @@ body.contact {
 
 /* Create four equal columns that sits next to each other */
 .column {
-	flex: 25%;
-	max-width: 25%;
+	flex: 33%;
+	max-width: 33%;
 	padding: 0 4px;
 }
 
