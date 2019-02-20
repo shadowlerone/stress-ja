@@ -74,8 +74,8 @@ body {
 img.scls {
 	height: 30px;
 	width: 30px;
-	margin-left: auto;
-	margin-right: auto;
+	margin-left: 5px;
+	margin-right: 5px;
 	margin-bottom: auto;
 }
 a.scls {
@@ -109,6 +109,20 @@ a.scls {
 	z-index: 0;
 	width: 100%;
 	overflow: hidden;
+}
+
+
+#wrapper.gallery {
+	background-image: url("/assets/images/g_background.jpg");
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	position: relative;
 }
 
 #team-image {
@@ -483,6 +497,7 @@ body.contact {
 	display: flex;
 	flex-wrap: wrap;
 	padding: 0 4px;
+	text-align: center;
 }
 
 /* Create four equal columns that sits next to each other */
@@ -492,12 +507,34 @@ body.contact {
 	padding: 0 4px;
 }
 
+.row:hover img {
+	filter: brightness(50%);
+}
+
 .column img {
 	margin-top: 8px;
 	vertical-align: middle;
 	width: 100%;
 	background-color: rgba(0, 0, 0, 0.4);
 	border-radius: 25px;
+	transition: 0.4s;
+	/* filter: brightness(50%); */
+}
+.column img:hover {
+	margin-top: 8px;
+	vertical-align: middle;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.4);
+	/* border-radius: 0px; */
+	filter: brightness(100%);
+	transition: 0.4s;
+	z-index: 100;
+	max-height: 80%;
+	max-width: 90%;
+	/* width: 150%; */
+	position: absolute;
+	left: 5%;
+	top: 30px;
 }
 
 /* Responsive layout - makes a two column-layout instead of four columns */
