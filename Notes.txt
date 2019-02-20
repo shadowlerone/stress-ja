@@ -1,0 +1,90 @@
+Responsabilities:
+	Make sure the information in the departments is correct
+	Responsable with marketing for prices, sales.
+	Make sure the JA software works
+
+Others Responsabilities:
+	President: Manage
+	Finance: accountant, filling out the software
+	Production: Assurer la production, manage inventory
+	Marketing: keeping tab on sales, works with Production for the inventory
+	RH: make sure the atmosphere works in the company
+
+Tools:
+	Drive
+	Evernote
+	Dropbox
+	Excel
+	Owncloud?
+	Office 365
+
+Logiciel JA:
+	Excel file
+	manages company management; update every few days
+	centre de la remise de livres électronique
+	all VPs (except for you) have tab(s) to fill out; job = make sure people fill it out properly
+	HARASS them to fill out the document
+	Parts:
+		General workings
+		Tableau de bord
+		Verification
+		Truc + astuces(?)
+
+Electronic file management:
+	keeps shit organized
+	back up (within reason)
+	keep things secure
+
+=> Private facebook group
+
+
+Web Strategies
+	Developing online presence
+	Search engines
+	Social Media
+	Planning => with marketing
+	Goals:
+		what we want the user to find
+		make it interesting
+		attractive, memorable
+	Don't spread onto too many social medias:
+		keep client base and goals in line
+	
+	feed the beast:
+		photos, promotions, ads, etc
+	watch for spelling
+	stay professional
+	delete comments from trolls
+	get help(?)
+
+Planning website
+	Failing to plan is planning to fail
+	what functions do we want?
+
+Site ergenomics
+	Maximum confort
+	effecient
+	ease of use
+	
+Look for hosts
+	don't spend too much
+
+Make the council approve your choices
+	make a list
+
+Website competition
+	Design, originality
+	Description of product
+	Interactivity
+	ergenomics
+	Technics (Structure of the site, pertinence)
+	Marketing principals
+	French quality
+
+Need help?
+	Conselors, Responsables des centres
+
+JA Software:
+	red means error
+	yellow means didn't meet goals
+	white means good to go

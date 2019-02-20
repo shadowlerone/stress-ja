@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css?family=Dosis');
+
+/* Validated by W3C CSS Validation Service */
+
+
+$primary_color: #3778ff;
+$secondary_color: #214899;
+$third_color: #142b5c;
+$margin_top: 90px;
+$border_radius: 25px;
+
+@import "extensions";
+@import "nav";
+@import "body";
+@import "foot";
+
+html
+	scroll-behavior: smooth;
+
+*
+	margin: 0px //!important
+	padding: 0px
+	text-align: center
+	text-decoration: none
+	list-style-type: none
+	font-family: 'Dosis', sans-serif
+	font-weight: 500

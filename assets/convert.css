@@ -1,0 +1,97 @@
+.VP {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  display: block;
+  min-height: 300px;
+  /* .gradient.blue.last
+  *
+  * background-image: linear-gradient(to left, $primary_color, rgba(0, 0, 0, 0)) */
+}
+.VP .left {
+  float: left;
+}
+.VP .right {
+  float: right;
+}
+.VP .text {
+  position: relative;
+  width: 30%;
+  height: 300px;
+  text-shadow: -0.5px 1px 0 rgba(0, 0, 0, 0.4);
+}
+.VP .text.blue {
+  background-color: #3778ff;
+}
+.VP .text.white {
+  background-color: white;
+}
+.VP span.nom {
+  font-weight: 600;
+}
+.VP .gradient {
+  width: 45%;
+  height: 300px;
+}
+.VP .gradient.white {
+  background-image: linear-gradient(to right, white, rgba(0, 0, 0, 0));
+}
+.VP .gradient.blue {
+  background-image: linear-gradient(to left, #3778ff, rgba(0, 0, 0, 0));
+}/*
+.VP .img-wrapper {
+  height: 300px;
+  width: 300px;
+  background-color: #3778ff;
+}
+.VP .img-wrapper img {
+  width: 100%;
+  padding: 5px;
+}*/
+
+.VP.first {
+  margin-top: -30px;
+}
+.VP.first .text {
+  padding-top: 30px;
+}
+
+#VPS {
+  display: block;
+  width: 100%;
+}
+
+.bgm {
+  background-image: url("/assets/images/vp-bg.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: relative;
+  height: 100%;
+}
+
+.membre {
+  border: 3px solid black;
+  border-radius: 25px;
+  width: 300px;
+  height: 200px;
+  padding: 10px;
+  display: inline-block;
+  background-color: #295ac0;
+  margin: 30px;
+  transition: 0.25s ease;
+  color: white;
+  text-shadow: -1px 2px 0 rgba(0, 0, 0, 0.4);
+}
+
+.membre:hover {
+  background-color: #3778ff;
+  transition: 0.2s;
+  text-shadow: -1px 2px 0 rgba(0, 0, 0, 0.4);
+}
