@@ -507,9 +507,9 @@ body.contact {
 	padding: 0 4px;
 }
 
-.row:hover img {
+/* .row:hover img {
 	filter: brightness(50%);
-}
+} */
 
 .column img {
 	margin-top: 8px;
@@ -518,23 +518,12 @@ body.contact {
 	background-color: rgba(0, 0, 0, 0.4);
 	border-radius: 25px;
 	transition: 0.4s;
-	/* filter: brightness(50%); */
+	filter: saturate(60%);
+	filter: grayscale(60%);
 }
 .column img:hover {
-	margin-top: 8px;
-	vertical-align: middle;
-	width: 100%;
-	background-color: rgba(0, 0, 0, 0.4);
-	/* border-radius: 0px; */
-	filter: brightness(100%);
-	transition: 0.4s;
-	z-index: 100;
-	max-height: 80%;
-	max-width: 90%;
-	/* width: 150%; */
-	position: absolute;
-	left: 5%;
-	top: 30px;
+	filter: saturate(100%);
+	filter: grayscale(0%);
 }
 
 /* Responsive layout - makes a two column-layout instead of four columns */
