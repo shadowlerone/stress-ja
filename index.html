@@ -25,7 +25,29 @@
 	<link rel="icon" type="image/png" href="/assets/images/favicon.png">
 
 	<link rel="stylesheet" type="text/css" media="screen" href="/main.css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="/main.js"></script>
+	<script>
+		function byID(id) {
+			return document.getElementById(id);
+		}
+
+		window.onscroll = function () {
+			scrollFunction()
+		};
+
+		function scrollFunction() {
+			if (window.pageYOffset >= byID("company-description").offsetHeight - 90) {
+				byID("AP").className = "active";
+				byID("AC").className = "";
+				return true;
+			} else {
+				byID("AP").className = "";
+				byID("AC").className = "active";
+				return false;
+			}
+		}
+	</script>
 </head>
 
 <body>
@@ -40,7 +62,8 @@
 			<a href="/contact">Nous Joindre</a>
 		</div>
 	</div>
-	<div id="scl"><a class="scls" href="https://www.instagram.com/stress_entreprise/"><img class="scls" src="/assets/images/IG_Glyph_Fill.png"></a><a href="https://www.facebook.com/Stress-co-344664102748703/"><img class="scls" src="/assets/images/flogo-HexRBG-Wht-1024.png"></a></div>
+	<div id="scl"><a class="scls" href="https://www.instagram.com/stress_entreprise/"><img class="scls" src="/assets/images/IG_Glyph_Fill.png"></a><a
+		 href="https://www.facebook.com/Stress-co-344664102748703/"><img class="scls" src="/assets/images/flogo-HexRBG-Wht-1024.png"></a></div>
 	<div id="wrapper">
 		<span id="accueil"></span>
 		<div id="team-image">
@@ -49,17 +72,19 @@
 		</div>
 		<div id="company-description" class="infront">
 			<div class="text">
-					<span class="header">Qui sommes nous?</span><br/>
-					Nous sommes une entreprise créée par des entrepreneurs de 5<sup>e</sup> secondaire avec l'aide de JA Québec, une organisation qui encourage les adolescents à créer leur entreprise.
-					Nous savons que le stress est partout dans le monde.
-					Dès notre plus jeune âge, nous avons peur ou nous nous inquiétons de quelque chose. 
-					En tant qu’étudiants, nous savons à quel point il est stressant de subir de grands examens et nous ne pouvons même pas imaginer le niveau de stress des adultes dans leur travail quotidien. 
-					C'est pourquoi nous fabriquons des balles anti-stress pour calmer les gens et au moins être un peu plus en paix.
+				<span class="header">Qui sommes nous?</span><br />
+				Nous sommes une entreprise créée par des entrepreneurs de 5<sup>e</sup> secondaire avec l'aide de JA Québec, une
+				organisation qui encourage les adolescents à créer leur entreprise.
+				Nous savons que le stress est partout dans le monde.
+				Dès notre plus jeune âge, nous avons peur ou nous nous inquiétons de quelque chose.
+				En tant qu’étudiants, nous savons à quel point il est stressant de subir de grands examens et nous ne pouvons même
+				pas imaginer le niveau de stress des adultes dans leur travail quotidien.
+				C'est pourquoi nous fabriquons des balles anti-stress pour calmer les gens et au moins être un peu plus en paix.
 			</div>
 			<div class="not_text">
-			<div class="gradient">
+				<div class="gradient">
 
-			</div>
+				</div>
 			</div>
 		</div>
 		<div id="production-image">

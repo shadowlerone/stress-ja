@@ -9,14 +9,26 @@ body {
 	font-family: Dosis, Helvetica, sans-serif;
 }
 
+.loading {
+	min-width: 100%;
+	min-height: 100%;
+	background: url("/assets/images/favicon.png") no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	z-index: 20;
+}
+
 #navbar {
+	display: hidden;
 	overflow: hidden;
 	background-color: #3778ff;
 	transition: 0.4s;
 	position: fixed;
 	width: 100%;
 	top: 0;
-	z-index: 99;
+	z-index: 5;
 	border-bottom-left-radius: 25px;
 	border-bottom-right-radius: 25px;
 }
@@ -63,7 +75,7 @@ body {
 	position: fixed;
 	right: 0;
 	bottom: 0;
-	z-index: 100000;
+	z-index: 6;
 	background-color: #3778ff;
 	padding: 12px;
 	border-top-left-radius: 25px;
@@ -78,6 +90,7 @@ img.scls {
 	margin-right: 5px;
 	margin-bottom: auto;
 }
+
 a.scls {
 	height: 30px;
 	width: 30px;
@@ -123,6 +136,30 @@ a.scls {
 	-o-background-size: cover;
 	background-size: cover;
 	position: relative;
+	/* animation-name: slide-up;
+	animation-duration: 4s; */
+}
+
+@keyframes slide-up {
+	from {
+		margin-top: 400%;
+		overflow: hidden;
+	}
+
+	to {
+		margin-top: 60px;
+		overflow: auto;
+	}
+}
+
+@keyframes slide-right {
+	from {
+		margin-left: 1000%
+	}
+
+	to {
+		margin-left: 0
+	}
 }
 
 #team-image {
@@ -136,7 +173,7 @@ a.scls {
 	-o-background-size: cover;
 	background-size: cover;
 	position: relative;
-	z-index: 5;
+	z-index: 4;
 	margin: -30px;
 }
 
@@ -190,7 +227,7 @@ a.scls {
 	background-size: cover;
 	margin-top: -30px;
 	position: relative;
-	z-index: 5;
+	z-index: 4;
 	height: 100vw;
 }
 
@@ -238,7 +275,7 @@ a.scls {
 	background-color: rgba(255, 255, 255, 0.4);
 	position: sticky;
 	bottom: 0;
-	z-index: 99;
+	z-index: 5;
 	text-align: center;
 	padding: 10px;
 	text-shadow: -0.5px 1px 0 rgba(0, 0, 0, 0.4);
@@ -475,7 +512,6 @@ body.contact {
 	-o-background-size: cover;
 	background-size: cover;
 	position: relative;
-	z-index: 5;
 	min-height: 100%;
 	padding-top: 30px;
 	font-size: 30px;
@@ -523,25 +559,67 @@ body.contact {
 }
 
 .modal {
-	display: none; /* Hidden by default */
-	position: fixed; /* Stay in place */
-	z-index: 1; /* Sit on top */
-	padding-top: 100px; /* Location of the box */
+	display: none;
+	/* Hidden by default */
+	position: fixed;
+	/* Stay in place */
+	z-index: 10;
+	/* Sit on top */
+	/* padding-top: 100px; */
 	left: 0;
 	top: 0;
-	width: 100%; /* Full width */
-	height: 100%; /* Full height */
-	overflow: auto; /* Enable scroll if needed */
-	background-color: rgb(0,0,0); /* Fallback color */
-	background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+	width: 100%;
+	/* Full width */
+	height: 100%;
+	/* Full height */
+	overflow: hidden;
+	/* Enable scroll if needed */
+	background-color: rgb(0, 0, 0);
+	/* Fallback color */
+	background-color: rgba(0, 0, 0, 0.4);
+	/* Black w/ opacity */
+	margin: 0;
+	box-sizing: border-box;
+	transition: 0.4s ease;
+}
+
+#close {
+	font-size: 30pt;
+	/* width: 100%; */
+	/* height: 31pt; */
+	border: 1px solid red;
 }
 
 .modal-content {
 	margin: auto;
 	display: block;
-	width: 80%;
-	max-width: 700px;
+	max-width: 80%;
+	/* max-width: 700px; */
+	max-height: 80%;
+	/* vertical-align: middle; */
+	margin-top: 5%;
+	margin-bottom: 5%;
+	animation-duration: 0.4s;
+	animation-name: popIn;
+	border-radius: 25px;
 }
+
+@keyframes popIn {
+	from {
+		margin-top: 45%;
+		margin-bottom: 45%;
+		max-width: 5%;
+		max-height: 5%;
+	}
+
+	to {
+		/* max-width: 80%;
+		max-height: 80%; */
+		margin-top: 5%;
+		margin-bottom: 5%;
+	}
+}
+
 
 #caption {
 	margin: auto;
