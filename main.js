@@ -1,7 +1,7 @@
 // Get the modal
 $(document).ready(function(){
-	$("#wrapper").hide();
-	$("#navbar").hide();
+	// $("#wrapper").hide();
+	/* $("#navbar").hide();
 	$("#footer").hide();
 	$(".loading").ready(function(){
 		$(".loading").delay(2000).fadeOut("slow");
@@ -14,7 +14,7 @@ $(document).ready(function(){
 	});
 	$("#footer").ready(function(){
 		$("#footer").delay(2300).fadeIn("slow");
-	});
+	}); */
 	
 	var list = document.getElementsByClassName('clmimg');
 	var imgs = [].slice.call(list);
@@ -36,5 +36,5 @@ $(document).ready(function(){
 	});
 });
 var close_modal = function () {
-	$("#myModal").fadeOut("slow");
+	$("#myModal").fadeOut("fast");
 }
