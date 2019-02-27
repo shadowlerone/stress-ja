@@ -1,21 +1,39 @@
 // Get the modal
-$(document).ready(function(){
-	// $("#wrapper").hide();
-	/* $("#navbar").hide();
-	$("#footer").hide();
-	$(".loading").ready(function(){
-		$(".loading").delay(2000).fadeOut("slow");
-	});
-	$("#navbar").ready(function(){
-		$("#navbar").delay(2000).slideDown("slow");
-	});
-	$("#wrapper").ready(function(){
-		$("#wrapper").delay(2300).fadeIn("slow");
-	});
-	$("#footer").ready(function(){
-		$("#footer").delay(2300).fadeIn("slow");
-	}); */
-	
+var lang = "fr"
+
+function getCookie(cname) {
+	var name = cname + "=";
+	var decodedCookie = decodeURIComponent(document.cookie);
+	var ca = decodedCookie.split(';');
+	for (var i = 0; i < ca.length; i++) {
+		var c = ca[i];
+		while (c.charAt(0) == ' ') {
+			c = c.substring(1);
+		}
+		if (c.indexOf(name) == 0) {
+			return c.substring(name.length, c.length);
+		}
+	}
+	return "";
+}
+
+function setCookie(cname, cvalue, exdays) {
+	var d = new Date();
+	d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+	var expires = "expires=" + d.toUTCString();
+	document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+$(document).ready(function () {
+	//COOKIE CODE
+	if (getCookie("language") != "") {
+		lang = getCookie("language")
+	} else {
+		setCookie("language", "fr", 31);
+	}
+
+
+	//MODAL
 	var list = document.getElementsByClassName('clmimg');
 	var imgs = [].slice.call(list);
 	runtime = 0;
@@ -37,4 +55,19 @@ $(document).ready(function(){
 });
 var close_modal = function () {
 	$("#myModal").fadeOut("fast");
+}
+
+
+
+
+var xhttp = new XMLHttpRequest();
+
+function loadDoc() {
+	xhttp.onreadystatechange = function (id) {
+		if (this.readyState == 4 && this.status == 200) {
+			document.getElementById("company-description").innerHTML = this.responseText;
+		}
+	};
+	xhttp.open("GET", `${lang}/i.html`, true);
+	xhttp.send();
 }
