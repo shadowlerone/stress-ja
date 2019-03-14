@@ -12,3 +12,20 @@
 	<div class="gradient">
 	</div>
 </div>
+<script>
+	function scrollFunction() {
+		console.log(`Y offset = ${window.pageYOffset}\nTarget Offset = ${byID("company-description").offsetHeight - 90}`);
+		if (window.pageYOffset >= document.getElementById("#company-description").offsetHeight - 90) {
+			$("#cd").addClass = "active";
+			$("#home").removeClass = "active";
+			return true;
+		} else {
+			$("#cd").removeClass = "active";
+			$("#home").addClass = "active";
+			return false;
+		}
+	}
+	window.onscroll = function () {
+		scrollFunction()
+	};
+</script>

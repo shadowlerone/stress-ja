@@ -24,15 +24,56 @@ function setCookie(cname, cvalue, exdays) {
 	document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 }
 
+function loadDoc() {
+	// ready = true;
+	xhttp.onreadystatechange = function () {
+		if (this.readyState == 4 && this.status == 200) {
+			document.getElementById("company-description").innerHTML = this.responseText;
+			console.log(this.responseText);
+
+		}
+	};
+	xhttp.open("GET", `/${lang}/i.html`, true);
+	xhttp.send();
+
+}
+
+function getNav() {
+	$("#navbar").load(`/${lang}/nav.html`).hide();
+}
+
+
+function myFunction() {
+	$("#navbar").toggleClass("responsive")
+	$("#logo").toggle()
+}
+
+$(document).ajaxStop(function () {
+	var delay = 200
+	$("#loading").delay(delay).fadeOut(500);
+	$("body").toggleClass("no-of");
+	$("#navbar").show();
+	$("#wrapper").show();
+	$(`#${id}`).toggleClass("active");
+});
+
+var setLang = function (lang) {
+	setCookie("language", lang, 31);
+	location.reload(true);
+}
+
 $(document).ready(function () {
 	//COOKIE CODE
+	$("#wrapper").hide();
 	if (getCookie("language") != "") {
 		lang = getCookie("language")
 	} else {
 		setCookie("language", "fr", 31);
 	}
+	getNav();
 
-
+	//console.log(id);
+	//loadDoc();
 	//MODAL
 	var list = document.getElementsByClassName('clmimg');
 	var imgs = [].slice.call(list);
@@ -61,13 +102,3 @@ var close_modal = function () {
 
 
 var xhttp = new XMLHttpRequest();
-
-function loadDoc() {
-	xhttp.onreadystatechange = function (id) {
-		if (this.readyState == 4 && this.status == 200) {
-			document.getElementById("company-description").innerHTML = this.responseText;
-		}
-	};
-	xhttp.open("GET", `${lang}/i.html`, true);
-	xhttp.send();
-}
