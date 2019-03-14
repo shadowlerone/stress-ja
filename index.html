@@ -27,6 +27,17 @@
 	<link rel="stylesheet" type="text/css" media="screen" href="/main.css" />
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="/main.js"></script>
+	<script>
+		var id = "home";
+		//var byID = function(){return true};
+
+		$(document).ready(function () {
+			$("#company-description").load(`/${lang}/i.html`);
+			byID = function (id) {
+				return document.getElementById(id);
+			}
+		});
+	</script>
 </head>
 
 <body class="no-of">
