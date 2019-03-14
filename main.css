@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Dosis");
 
-html {scrollbar-width: none}
+html {
+	scrollbar-width: none
+}
 
 * {
 	box-sizing: border-box;
@@ -86,7 +88,7 @@ body {
 	padding: 0;
 	/* margin: 10px; */
 	line-height: 5vh;
-	height: 5vh;
+	/* height: 5vh; */
 	border-radius: 100%;
 }
 
@@ -566,7 +568,7 @@ body.contact {
 	background: none;
 }
 
-#navbar.contact a:hover{
+#navbar.contact a:hover {
 	background-color: rgba(0, 0, 200, 0.3);
 	/* border: 2px solid rgba(55, 130, 200, 0.8); */
 }
@@ -717,7 +719,8 @@ body.contact {
 		/* //position: sticky */
 		padding: 0;
 	}
-	#navbar a.icon:hover{
+
+	#navbar a.icon:hover {
 		border-radius: 0;
 		background-color: rgba(0, 0, 0, 0);
 	}
@@ -799,23 +802,27 @@ body.contact {
 	}
 
 	#VPS {
-		width: 100%;
+		width: 100vw;
 		margin: 0;
 		display: initial;
 	}
 
 	.VP {
-		width: 90%;
-		height: 500px;
-		padding: 10px;
-		margin-top: 15px;
-		margin-bottom: 15px;
-		margin-left: auto;
+		width: 90vw;
+		/* height: 75vh; */
+		padding: 0;
+		/* margin-top: 15px; */
+		margin-bottom: 2.5vh;
+		/* margin-left: auto; */
 		transition: 0.25s ease;
 		color: white;
 		text-shadow: -1px 2px 0 rgba(0, 0, 0, 0.4);
-		display: inline;
+		display: inline-block;
 		float: none;
+		/* padding: 5vh auto 5vh auto; */
+		/* min-height: 50vh; */
+		border-radius: 25px;
+		overflow: hidden;
 	}
 
 	.VP .gradient {
@@ -840,12 +847,14 @@ body.contact {
 		background-color: rgba(0, 0, 0, 0.4) !important;
 		color: white;
 		float: none !important;
+		min-height: 0 !important;
+		padding: 2.5%;
+		height: auto !important;
+		text-align: center;
+		text-align-last: center;
 	}
 
-	.VP .white {
-		background-color: rgba(0, 0, 0, 0.4);
-	}
-
+	.VP .white,
 	.VP .blue {
 		background-color: rgba(0, 0, 0, 0.4);
 	}
