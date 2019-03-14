@@ -568,10 +568,9 @@ body.contact {
 	background: none;
 }
 
-#navbar.contact a:hover {
+/* #navbar.contact a:hover {
 	background-color: rgba(0, 0, 200, 0.3);
-	/* border: 2px solid rgba(55, 130, 200, 0.8); */
-}
+} */
 
 .row {
 	display: flex;
